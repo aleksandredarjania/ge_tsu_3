@@ -1,20 +1,19 @@
 name: CI Example
 
-# 1. როდის გაეშვას (ტრიგერი)
+
 on:
   push:
     branches: [ "main" ]
 
-# 2. რა სამუშაო შეასრულოს
 jobs:
   build:
-    runs-on: ubuntu-latest # ვირტუალური გარემო
+    runs-on: ubuntu-latest 
 
     steps:
-      # ნაბიჯი 1: კოდის გადმოწერა რეპოზიტორიიდან
+    
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # ნაბიჯი 2: მარტივი ბრძანების გაშვება
+     
       - name: Run a one-line script
         run: echo "Hello, world! GitHub Actions მუშაობს!"
